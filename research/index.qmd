@@ -1,0 +1,11 @@
+---
+title: "research"
+---
+
+```{r}
+#| echo: false
+#| output: asis
+#| column: page
+r <- getwd(); while (!file.exists(file.path(r, "_quarto.yml")) && dirname(r) != r) r <- dirname(r); source(file.path(r, "_R", "helpers.R"))
+panels(c(papers = "working papers", datasets = "datasets", notes = "short notes"))
+```

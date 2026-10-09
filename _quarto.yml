@@ -1,0 +1,36 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "jacob rose"
+  navbar:
+    left:
+      - href: index.qmd
+        text: home
+      - text: research
+        menu:
+          - href: research/index.qmd
+            text: overview
+          - href: research/gallery.qmd
+            text: gallery
+      - text: mountains
+        menu:
+          - href: mountains/index.qmd
+            text: overview
+          - href: mountains/gallery.qmd
+            text: gallery
+      - href: gallery/index.qmd
+        text: gallery
+
+format:
+  html:
+    theme:
+      light: [cosmo, theme-light.scss]
+      dark: darkly
+    css: styles.css
+    lightbox:
+      match: auto
+      effect: zoom
+      desc-position: bottom
+      loop: true

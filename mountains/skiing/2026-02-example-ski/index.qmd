@@ -1,0 +1,24 @@
+---
+title: "example ski tour"
+date: 2026-02-20
+image: thumb.png
+summary: |
+  placeholder summary. replace with a full paragraph covering the question, the data, the approach and the main result. it is shown in full under the title on the overview page, so it can run to several sentences.
+---
+
+## route
+
+## conditions
+
+## notes
+
+## photos
+
+drop photos into a photos/ folder next to this file. they show below and in the mountains gallery.
+
+```{r}
+#| echo: false
+#| output: asis
+r <- getwd(); while (!file.exists(file.path(r, "_quarto.yml")) && dirname(r) != r) r <- dirname(r); source(file.path(r, "_R", "helpers.R"))
+section_gallery("photos")
+```

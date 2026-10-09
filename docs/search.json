@@ -1,0 +1,156 @@
+[
+  {
+    "objectID": "research/papers/2026-example-paper/index.html",
+    "href": "research/papers/2026-example-paper/index.html",
+    "title": "example working paper",
+    "section": "",
+    "text": "essay-style discussion of the paper goes here."
+  },
+  {
+    "objectID": "research/papers/2026-example-paper/index.html#discussion",
+    "href": "research/papers/2026-example-paper/index.html#discussion",
+    "title": "example working paper",
+    "section": "",
+    "text": "essay-style discussion of the paper goes here."
+  },
+  {
+    "objectID": "research/papers/2026-example-paper/index.html#pdf",
+    "href": "research/papers/2026-example-paper/index.html#pdf",
+    "title": "example working paper",
+    "section": "pdf",
+    "text": "pdf\nput paper.pdf in this folder and link it here."
+  },
+  {
+    "objectID": "research/index.html",
+    "href": "research/index.html",
+    "title": "research",
+    "section": "",
+    "text": "working papers\n\n\n\n\nexample working paper\n1 october 2026\n\n\nplaceholder summary. replace with a full paragraph covering the question, the data, the approach and the main result. it is shown in full under the title on the overview page, so it can run to several sentences.\n\n\n\ndatasets\n\n\n\n\nexample dataset\n15 september 2026\n\n\nplaceholder summary. replace with a full paragraph covering the question, the data, the approach and the main result. it is shown in full under the title on the overview page, so it can run to several sentences.\n\n\n\nshort notes\n\n\n\n\nexample short note\n1 september 2026\n\n\nplaceholder summary. replace with a full paragraph covering the question, the data, the approach and the main result. it is shown in full under the title on the overview page, so it can run to several sentences."
+  },
+  {
+    "objectID": "research/datasets/2026-example-dataset/index.html",
+    "href": "research/datasets/2026-example-dataset/index.html",
+    "title": "example dataset",
+    "section": "",
+    "text": "coverage, construction and variable definitions."
+  },
+  {
+    "objectID": "research/datasets/2026-example-dataset/index.html#description",
+    "href": "research/datasets/2026-example-dataset/index.html#description",
+    "title": "example dataset",
+    "section": "",
+    "text": "coverage, construction and variable definitions."
+  },
+  {
+    "objectID": "research/datasets/2026-example-dataset/index.html#access",
+    "href": "research/datasets/2026-example-dataset/index.html#access",
+    "title": "example dataset",
+    "section": "access",
+    "text": "access\nzenodo doi goes here."
+  },
+  {
+    "objectID": "mountains/index.html",
+    "href": "mountains/index.html",
+    "title": "mountains",
+    "section": "",
+    "text": "alpine\n\n\n\n\nexample alpine route\n15 august 2026\n\n\nplaceholder summary. replace with a full paragraph covering the question, the data, the approach and the main result. it is shown in full under the title on the overview page, so it can run to several sentences.\n\n\n\nskiing\n\n\n\n\nexample ski tour\n20 february 2026\n\n\nplaceholder summary. replace with a full paragraph covering the question, the data, the approach and the main result. it is shown in full under the title on the overview page, so it can run to several sentences.\n\n\n\nclimbing\n\n\n\n\nexample climb\n10 june 2026\n\n\nplaceholder summary. replace with a full paragraph covering the question, the data, the approach and the main result. it is shown in full under the title on the overview page, so it can run to several sentences."
+  },
+  {
+    "objectID": "mountains/climbing/2026-06-example-climb/index.html#conditions",
+    "href": "mountains/climbing/2026-06-example-climb/index.html#conditions",
+    "title": "example climb",
+    "section": "conditions",
+    "text": "conditions"
+  },
+  {
+    "objectID": "mountains/climbing/2026-06-example-climb/index.html#notes",
+    "href": "mountains/climbing/2026-06-example-climb/index.html#notes",
+    "title": "example climb",
+    "section": "notes",
+    "text": "notes"
+  },
+  {
+    "objectID": "mountains/climbing/2026-06-example-climb/index.html#photos",
+    "href": "mountains/climbing/2026-06-example-climb/index.html#photos",
+    "title": "example climb",
+    "section": "photos",
+    "text": "photos\ndrop photos into a photos/ folder next to this file. they show below and in the mountains gallery.\nno photos yet."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "J.M.O.Rose",
+    "section": "",
+    "text": "Jacob is an historical demographer and economic historian currently at the University of Oxford. This website contains his academic work as well as photos and trip reports relating to climbing, mountaineering, and skiing.\n\n\nresearch\nworking papers and datasets\n\n\nmountains\ntrip reports, conditions, and photos"
+  },
+  {
+    "objectID": "gallery/index.html",
+    "href": "gallery/index.html",
+    "title": "gallery",
+    "section": "",
+    "text": "example caption 1. edit in gallery/captions.csv\n\n\n\n\n\nexample caption 2. edit in gallery/captions.csv\n\n\n\n\n\nexample caption 3. edit in gallery/captions.csv\n\n\n\n\n\nexample caption 4. edit in gallery/captions.csv"
+  },
+  {
+    "objectID": "mountains/alpine/2026-08-example-alpine/index.html#conditions",
+    "href": "mountains/alpine/2026-08-example-alpine/index.html#conditions",
+    "title": "example alpine route",
+    "section": "conditions",
+    "text": "conditions"
+  },
+  {
+    "objectID": "mountains/alpine/2026-08-example-alpine/index.html#notes",
+    "href": "mountains/alpine/2026-08-example-alpine/index.html#notes",
+    "title": "example alpine route",
+    "section": "notes",
+    "text": "notes"
+  },
+  {
+    "objectID": "mountains/alpine/2026-08-example-alpine/index.html#photos",
+    "href": "mountains/alpine/2026-08-example-alpine/index.html#photos",
+    "title": "example alpine route",
+    "section": "photos",
+    "text": "photos\ndrop photos into a photos/ folder next to this file. they show below and in the mountains gallery.\nno photos yet."
+  },
+  {
+    "objectID": "mountains/gallery.html",
+    "href": "mountains/gallery.html",
+    "title": "gallery",
+    "section": "",
+    "text": "no photos yet."
+  },
+  {
+    "objectID": "mountains/skiing/2026-02-example-ski/index.html#conditions",
+    "href": "mountains/skiing/2026-02-example-ski/index.html#conditions",
+    "title": "example ski tour",
+    "section": "conditions",
+    "text": "conditions"
+  },
+  {
+    "objectID": "mountains/skiing/2026-02-example-ski/index.html#notes",
+    "href": "mountains/skiing/2026-02-example-ski/index.html#notes",
+    "title": "example ski tour",
+    "section": "notes",
+    "text": "notes"
+  },
+  {
+    "objectID": "mountains/skiing/2026-02-example-ski/index.html#photos",
+    "href": "mountains/skiing/2026-02-example-ski/index.html#photos",
+    "title": "example ski tour",
+    "section": "photos",
+    "text": "photos\ndrop photos into a photos/ folder next to this file. they show below and in the mountains gallery.\nno photos yet."
+  },
+  {
+    "objectID": "research/gallery.html",
+    "href": "research/gallery.html",
+    "title": "gallery",
+    "section": "",
+    "text": "no photos yet."
+  },
+  {
+    "objectID": "research/notes/2026-example-note/index.html",
+    "href": "research/notes/2026-example-note/index.html",
+    "title": "example short note",
+    "section": "",
+    "text": "short methodological note goes here."
+  }
+]

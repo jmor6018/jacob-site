@@ -1,0 +1,15 @@
+---
+title: "example working paper"
+date: 2026-10-01
+image: thumb.png
+summary: |
+  placeholder summary. replace with a full paragraph covering the question, the data, the approach and the main result. it is shown in full under the title on the overview page, so it can run to several sentences.
+---
+
+## discussion
+
+essay-style discussion of the paper goes here.
+
+## pdf
+
+put paper.pdf in this folder and link it here.

@@ -1,0 +1,11 @@
+---
+title: "mountains"
+---
+
+```{r}
+#| echo: false
+#| output: asis
+#| column: page
+r <- getwd(); while (!file.exists(file.path(r, "_quarto.yml")) && dirname(r) != r) r <- dirname(r); source(file.path(r, "_R", "helpers.R"))
+panels(c(alpine = "alpine", skiing = "skiing", climbing = "climbing"))
+```

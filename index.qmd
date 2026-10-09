@@ -1,0 +1,16 @@
+---
+title: "J.M.O.Rose"
+---
+
+Jacob is an historical demographer and economic historian currently at the University of Oxford. This website contains his academic work as well as photos and trip reports relating to climbing, mountaineering, and skiing.
+
+:::: {.grid}
+::: {.g-col-12 .g-col-md-6}
+### [research](research/index.qmd)
+working papers and datasets
+:::
+::: {.g-col-12 .g-col-md-6}
+### [mountains](mountains/index.qmd)
+trip reports, conditions, and photos
+:::
+::::
