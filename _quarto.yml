@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: docs
+  resources:
+    - cv.pdf
 
 website:
   title: "jacob rose"
@@ -22,6 +24,8 @@ website:
             text: gallery
       - href: gallery/index.qmd
         text: gallery
+      - href: cv.qmd
+        text: CV
 
 format:
   html:

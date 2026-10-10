@@ -1,0 +1,8 @@
+---
+title: "CV"
+page-layout: full
+---
+
+[download pdf](cv.pdf){.cv-download}
+
+<iframe src="cv.pdf" class="cv-frame" title="CV"></iframe>
