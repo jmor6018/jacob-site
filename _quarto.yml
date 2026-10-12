@@ -6,6 +6,7 @@ project:
 
 website:
   title: "jacob rose"
+  site-url: "https://jmor6018.github.io/jacob-site/"
   navbar:
     left:
       - href: index.qmd
