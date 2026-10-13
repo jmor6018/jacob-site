@@ -33,12 +33,18 @@ photo_md <- function(paths, caps, group) {
       ":::\n", sep = "")
 }
 
-photo_grid <- function(dir = "photos", captions = "captions.csv") {
+gallery_set <- function(dir, captions) {
   imgs <- list.files(dir, pattern = "(?i)\\.(jpe?g|png|webp)$")
+  if (!length(imgs)) return(data.frame(path = character(), caption = character()))
   cap <- if (file.exists(captions)) read.csv(captions, fileEncoding = "UTF-8-BOM", stringsAsFactors = FALSE) else data.frame(file = character(), caption = character())
   ord <- c(intersect(cap$file, imgs), sort(setdiff(imgs, cap$file)))
-  txt <- cap$caption[match(ord, cap$file)]
-  photo_md(file.path(dir, ord), ifelse(is.na(txt), "", txt), "gallery")
+  txt <- as.character(cap$caption[match(ord, cap$file)])
+  data.frame(path = file.path(dir, ord), caption = ifelse(is.na(txt), "", txt))
+}
+
+photo_grid <- function(dirs = "photos", captions = "captions.csv", group = "gallery") {
+  s <- do.call(rbind, unname(Map(gallery_set, dirs, captions)))
+  photo_md(s$path, s$caption, group)
 }
 
 section_gallery <- function(dirs) {

@@ -7,5 +7,5 @@ title: "gallery"
 #| output: asis
 #| column: page
 r <- getwd(); while (!file.exists(file.path(r, "_quarto.yml")) && dirname(r) != r) r <- dirname(r); source(file.path(r, "_R", "helpers.R"))
-photo_grid("photos", "captions.csv")
+photo_grid(c("../mountains/photos", "../research/photos", "photos"), c("../mountains/captions.csv", "../research/captions.csv", "captions.csv"))
 ```
