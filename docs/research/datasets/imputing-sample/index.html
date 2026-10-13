@@ -42,6 +42,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -174,7 +177,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This is a sample of a set of full birth histories for 3.4 million married women in England and Wales in 1911. This means that the data records the age the woman was when she gave birth to all of her children, and can be used for a range of demographic analyses. The data here is the outcome of ~4,500 lines of raw data processing and imputation, which works by using a hierarchy of many conditional probabilities to estimate when in a woman’s life she would have given birth to all the children I know she ever had, but who I can not observe.</p>
+<p>This is a sample of a set of full birth histories for 3.4 million married women in England and Wales in 1911. This means that the data records the age the woman was when she gave birth to all of her children, and can be used for a range of demographic analyses. The data here is the outcome of ~4,500 lines of raw data processing and imputation code, which works by using a hierarchy of many iterative conditional probabilities. These estimate when in a woman’s life she would have given birth to children that were once born to her but are now unobservable, either due to death or depature from the home.</p>
 <section id="download" class="level2">
 <h2 class="anchored" data-anchor-id="download">download</h2>
 <ul>
@@ -182,6 +185,7 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="imputed_1911_sample.rds">imputed_1911_sample.rds</a> (1.4 MB)</li>
 <li><a href="README.txt">readme</a></li>
 </ul>
+<p><a href="mortality_picture.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="mortality_picture.png" class="img-fluid" style="width:100.0%"></a></p>
 </section>
 <section id="readme" class="level2">
 <h2 class="anchored" data-anchor-id="readme">readme</h2>
@@ -253,7 +257,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Q_Local (x)=invlogit(αk+βk×Y_National (x))</p>
 <p>This is performed for all individual ages x in each district, applying for each age the relevant parameters α and β from the age bracket k that x sits inside. With all the values of cumulative death probability Q, the inverse of cumulative survivorship l to each age x can be calculated, yielding the single year probabilities required for the imputation weighting.</p>
 <p>l_x=1-Q(x)</p>
-<p>The Brass-Logit method was applied iteratively four times given that each consistent registration district 1851-1911 has aggregate mortality data for the age brackets 5-14, 15-44, and 45-64, which are combined with the reweighted IMR and ECMR. This method therefore only extends the regular Brass-Logit method, which infers values between the two points on a straight line in the log-odds plane, forward and backwards across several points in distinct calculations. This is not without precedent (Moultrie et al.&nbsp;2013, 350-355). The output values are simply stitched onto each other. The four iterations produce four sets of non-overlapping consecutive individual year lifetable data for each consistent registration district. In some areas the boundaries between each age bracket will provide slight positive or negative discontinuities in the single-year survival probabilities. This is because significant differences in the α and β parameters in different age groups (i.e.&nbsp;a local age bracket’s intensity of deviation from the norm) will produce moderately different q𝑥 values around border years. However, given that imputation uses cumulative lx values it is robust to local shifts in qx. This gives local weighted life tables for ages 0-64 in census years 1851-1911 for 577 consistent districts. The intervening years and quarter years have life tables linearly interpolated between censuses. Each birth cohort of imputable ages now possesses 577 area-specific life tables which reflect the varied mortality landscape of England and Wales. Figure 6 shows the national cohort values for birth cohort survivorship to each age for each census year in red, and each of the 577 districts in black. That the red line sits significantly below the bulk of the districts is expected: it is a population-weighted average dragged down by the mortal conditions in urban areas.</p>
+<p>The Brass-Logit method was applied iteratively four times given that each consistent registration district 1851-1911 has aggregate mortality data for the age brackets 5-14, 15-44, and 45-64, which are combined with the reweighted IMR and ECMR. This method therefore only extends the regular Brass-Logit method, which infers values between the two points on a straight line in the log-odds plane, forward and backwards across several points in distinct calculations. This is not without precedent (Moultrie et al.&nbsp;2013, 350-355). The output values are simply stitched onto each other. The four iterations produce four sets of non-overlapping consecutive individual year lifetable data for each consistent registration district. In some areas the boundaries between each age bracket will provide slight positive or negative discontinuities in the single-year survival probabilities. This is because significant differences in the α and β parameters in different age groups (i.e.&nbsp;a local age bracket’s intensity of deviation from the norm) will produce moderately different q𝑥 values around border years. However, given that imputation uses cumulative lx values it is robust to local shifts in qx. This gives local weighted life tables for ages 0-64 in census years 1851-1911 for 577 consistent districts. The intervening years and quarter years have life tables linearly interpolated between censuses. Each birth cohort of imputable ages now possesses 577 area-specific life tables which reflect the varied mortality landscape of England and Wales. The figure in this file shows the national cohort values for birth cohort survivorship to each age for each census year in red, and each of the 577 districts in black. That the red line sits significantly below the bulk of the districts is expected: it is a population-weighted average dragged down by the mortal conditions in urban areas.</p>
 </section>
 <section id="data" class="level2">
 <h2 class="anchored" data-anchor-id="data">data</h2>
@@ -1149,6 +1153,38 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"loop":true,"openEffect":"zoom","selector":".lightbox","descPosition":"bottom","closeEffect":"zoom"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

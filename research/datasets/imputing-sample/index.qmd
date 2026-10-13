@@ -3,20 +3,24 @@ title: "imputed 1911 birth histories (100,000-woman sample)"
 date: 2026-10-13
 image: thumb.png
 summary: |
-  This is a sample of a set of full birth histories for 3.4 million married women in England and Wales in 1911. This means that the data records the age the woman was when she gave birth to all of her children, and can be used for a range of demographic analyses. The data here is the outcome of ~4,500 lines of raw data processing and imputation, which works by using a hierarchy of many conditional probabilities to estimate when in a woman's life she would have given birth to all the children I know she ever had, but who I can not observe.
+  This is a sample of a set of full birth histories for 3.4 million married women in England and Wales in 1911. This means that the data records the age the woman was when she gave birth to all of her children, and can be used for a range of demographic analyses. The data here is the outcome of ~4,500 lines of raw data processing and imputation code, which works by using a hierarchy of many iterative conditional probabilities. These estimate when in a woman's life she would have given birth to children that were once born to her but are now unobservable, either due to death or depature from the home.
 resources:
   - imputed_1911_sample.csv
   - imputed_1911_sample.rds
   - README.txt
+  - mortality_picture.png
 ---
 
-This is a sample of a set of full birth histories for 3.4 million married women in England and Wales in 1911. This means that the data records the age the woman was when she gave birth to all of her children, and can be used for a range of demographic analyses. The data here is the outcome of ~4,500 lines of raw data processing and imputation, which works by using a hierarchy of many conditional probabilities to estimate when in a woman's life she would have given birth to all the children I know she ever had, but who I can not observe.
+This is a sample of a set of full birth histories for 3.4 million married women in England and Wales in 1911. This means that the data records the age the woman was when she gave birth to all of her children, and can be used for a range of demographic analyses. The data here is the outcome of ~4,500 lines of raw data processing and imputation code, which works by using a hierarchy of many iterative conditional probabilities. These estimate when in a woman's life she would have given birth to children that were once born to her but are now unobservable, either due to death or depature from the home.
 
 ## download
 
 - [imputed_1911_sample.csv](imputed_1911_sample.csv) (4.0 MB)
 - [imputed_1911_sample.rds](imputed_1911_sample.rds) (1.4 MB)
 - [readme](README.txt)
+
+![](mortality_picture.png){width=100%}
+
 
 ## readme
 
@@ -218,7 +222,7 @@ l\_x=1-Q(x)
 
 
 
-The Brass-Logit method was applied iteratively four times given that each consistent registration district 1851-1911 has aggregate mortality data for the age brackets 5-14, 15-44, and 45-64, which are combined with the reweighted IMR and ECMR. This method therefore only extends the regular Brass-Logit method, which infers values between the two points on a straight line in the log-odds plane, forward and backwards across several points in distinct calculations. This is not without precedent (Moultrie et al. 2013, 350-355). The output values are simply stitched onto each other. The four iterations produce four sets of non-overlapping consecutive individual year lifetable data for each consistent registration district. In some areas the boundaries between each age bracket will provide slight positive or negative discontinuities in the single-year survival probabilities. This is because significant differences in the α and β parameters in different age groups (i.e. a local age bracket’s intensity of deviation from the norm) will produce moderately different q𝑥 values around border years. However, given that imputation uses cumulative lx values it is robust to local shifts in qx. This gives local weighted life tables for ages 0-64 in census years 1851-1911 for 577 consistent districts. The intervening years and quarter years have life tables linearly interpolated between censuses. Each birth cohort of imputable ages now possesses 577 area-specific life tables which reflect the varied mortality landscape of England and Wales. Figure 6 shows the national cohort values for birth cohort survivorship to each age for each census year in red, and each of the 577 districts in black. That the red line sits significantly below the bulk of the districts is expected: it is a population-weighted average dragged down by the mortal conditions in urban areas.
+The Brass-Logit method was applied iteratively four times given that each consistent registration district 1851-1911 has aggregate mortality data for the age brackets 5-14, 15-44, and 45-64, which are combined with the reweighted IMR and ECMR. This method therefore only extends the regular Brass-Logit method, which infers values between the two points on a straight line in the log-odds plane, forward and backwards across several points in distinct calculations. This is not without precedent (Moultrie et al. 2013, 350-355). The output values are simply stitched onto each other. The four iterations produce four sets of non-overlapping consecutive individual year lifetable data for each consistent registration district. In some areas the boundaries between each age bracket will provide slight positive or negative discontinuities in the single-year survival probabilities. This is because significant differences in the α and β parameters in different age groups (i.e. a local age bracket’s intensity of deviation from the norm) will produce moderately different q𝑥 values around border years. However, given that imputation uses cumulative lx values it is robust to local shifts in qx. This gives local weighted life tables for ages 0-64 in census years 1851-1911 for 577 consistent districts. The intervening years and quarter years have life tables linearly interpolated between censuses. Each birth cohort of imputable ages now possesses 577 area-specific life tables which reflect the varied mortality landscape of England and Wales. The figure in this file shows the national cohort values for birth cohort survivorship to each age for each census year in red, and each of the 577 districts in black. That the red line sits significantly below the bulk of the districts is expected: it is a population-weighted average dragged down by the mortal conditions in urban areas.
 
 
 
